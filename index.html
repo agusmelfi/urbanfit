@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern E-commerce</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header">
+      <h1 class="logo">URBANFIT</h1>
+      <nav>
+        <ul>
+          <li><a href="#products">Shop</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#" id="cart-link">Cart (0)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Crafted to blend fashion with function.</h2>
+      <a href="#products"><button>Shop New Arrivals</button></a>
+    </div>
+    <img src="./images/ropa.jpg" alt="Hero Image" />
+  </section>
+
+  <!-- Category Filters -->
+  <section class="category-filter">
+    <button class="active" data-category="all">All</button>
+    <button data-category="tops">Tops</button>
+    <button data-category="pants">Pants</button>
+    <button data-category="accessories">Accessories</button>
+  </section>
+
+  <!-- Product Section -->
+  <section class="products" id="products">
+    <h2>This Season's Best Sellers</h2>
+    <div class="product-grid"></div>
+  </section>
+
+  <!-- Cart Sidebar -->
+  <aside id="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
+    <button id="buy-cart" aria-label="Buy Cart">Buy</button>
+    <button id="close-cart" aria-label="Close Cart">✖</button>
+  </aside>
+
+
+  <section class="about" id="about">
+    <div class="about-content">
+      <h2>Activewear Made for Real Life</h2>
+      <p>
+        At <strong>URBANFIT</strong>, we design activewear that blends performance, comfort, and modern style. Our goal is simple: to support your movement, wherever life takes you.
+        <br /><br />
+        Whether you're working out, walking through the city, or just taking it slow — our clothes are made to move with you. We focus on quality, versatility, and thoughtful design that fits your lifestyle.
+        <br /><br />
+        URBANFIT is more than a brand — it's a way to live actively, confidently, and authentically.
+      </p>
+      <a href="#products"><button>Start Shopping</button></a>
+    </div>
+    <img src="./images/fotoAmigos.jpg" alt="UrbanFit team" />
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 URBANFIT. All rights reserved.</p>
+      <p>Design by <strong><a style="text-decoration: none; color: var(--color-muted);" href="https://melfistudioweb.com.ar/">Studio Web & Design</a></p></strong>
+      <p>1234 Ocean Drive, Miami, FL 33139</p>
+      <p>Phone: (305) 555-0199</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init("-OIQzzIUuKCMTulfD"); // tu PUBLIC KEY
+  </script>
+  <script type="module" src="./main.js"></script>
+
+  
+
+</body>
+</html>
