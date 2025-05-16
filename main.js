@@ -20,13 +20,13 @@ document.getElementById("close-cart").addEventListener("click", () => {
 document.getElementById("buy-cart").addEventListener("click", () => {
  
   if (cart.length === 0) {
-    alert("Tu carrito está vacío.");
+    alert("Your cart is empty.");
     return;
   }
 
-  const email = prompt("Ingresá tu email para recibir el resumen:");
+  const email = prompt("Enter your email to receive your resume:");
   if (!email || !email.includes("@")) {
-    alert("Email inválido.");
+    alert("Invalid email.");
     return;
   }
 
@@ -54,13 +54,13 @@ document.getElementById("buy-cart").addEventListener("click", () => {
 
   emailjs.send('service_u6toczi', 'template_55h0lxc', templateParams)
     .then(() => {
-      alert(`Compra registrada. Código: ${orderId}`);
+      alert(`Purchase registered. Code: ${orderId}`);
       cart = [];
       updateCart();
     })
     .catch(err => {
       console.error("Error EmailJS:", err);
-      alert("Error al enviar email.");
+      alert("Error sending email.");
     });
 });
 
